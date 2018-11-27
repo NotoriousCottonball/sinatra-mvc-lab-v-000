@@ -20,3 +20,4 @@ class PigLatinizer
     end
     latinized[0..-2]
   end
+end
