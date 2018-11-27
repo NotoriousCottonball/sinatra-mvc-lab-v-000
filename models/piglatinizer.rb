@@ -12,7 +12,7 @@ class PigLatinizer
         word += "way"
       else first_part = word.split (/([aeiou].*)/i)
         if word = first_part[1] 
-        word += "ay"
+          word += first_part[0]
       end
       string + word + " "
     end.strip
