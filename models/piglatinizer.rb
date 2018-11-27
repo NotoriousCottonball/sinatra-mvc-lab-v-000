@@ -12,7 +12,7 @@ class PigLatinizer
         word += "way"
       else 
         array = word.split (/([aeiou].*)/i)
-        
+        word = array[1]
         
       end
       string + word + " "
