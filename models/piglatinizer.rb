@@ -13,7 +13,7 @@ class PigLatinizer
       else 
         array = word.split (/([aeiou].*)/i)
         array[1] ||= ""
-        word += array[0]
+        word = array[1] + array[2] + "ay"
       end
       string + word + " "
     end.strip
