@@ -14,6 +14,6 @@ class PigLatinizer
         first_chunk = word.split /([aeiou].*)/
         word = first_chunk[1] + first_chunk[0] + "ay"
       end
-      sring += word + " "
+      string += word + " "
     end.strip
 end
