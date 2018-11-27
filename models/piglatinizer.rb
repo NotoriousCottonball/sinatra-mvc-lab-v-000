@@ -7,9 +7,7 @@ class PigLatinizer
   end
 
   def piglatinize(phrase=text)
-    phrase_array = phrase.split(" ")
-    latinized = ""
-    phrase_array.each do |word|
+    phrase.split(" ").inject("") do |string, word|
       if word.start_with?("a", "A", "e", "E", "i", "I", "o", "O", "u", "U")
         word += "way"
       else
@@ -17,7 +15,5 @@ class PigLatinizer
         word = first_chunk[1] + first_chunk[0] + "ay"
       end
       latinized += word + " "
-    end
-    latinized[0..-2]
-  end
+    end.strip
 end
