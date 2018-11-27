@@ -10,8 +10,7 @@ class PigLatinizer
     phrase.split(" ").inject("") do |string, word|
       if word.start_with?("a", "A", "e", "E", "i", "I", "o", "O", "u", "U")
         word += "way"
-      elsif word.
-      else
+      elsif word.include?()
         first_chunk = word.split /([aeiou].*)/
         word = first_chunk[1] + first_chunk[0] + "ay"
       end
