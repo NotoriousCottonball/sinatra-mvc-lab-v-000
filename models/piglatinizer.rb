@@ -16,4 +16,5 @@ class PigLatinizer
       end
       string + word + " "
     end.strip
+  end
 end
