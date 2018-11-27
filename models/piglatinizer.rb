@@ -11,7 +11,7 @@ class PigLatinizer
       if word.start_with?("a", "A", "e", "E", "i", "I", "o", "O", "u", "U")
         word += "way"
       elsif word.include?("a", "A", "e", "E", "i", "I", "o", "O", "u", "U")
-        first_chunk = word.split /([aeiou].*)/
+        first_chunk = word.split (/([aeiou].*)/i)
         word = first_chunk[1] + first_chunk[0] + "ay"
       end
       string + word + " "
